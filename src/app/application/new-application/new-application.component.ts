@@ -16,7 +16,11 @@ export class NewApplicationComponent implements OnInit {
 
   ngOnInit() {
     this.firstFormGroup = this._formBuilder.group({
-      firstCtrl: ["", Validators.required]
+      name: ["", Validators.required],
+      birthPlace: ["", Validators.required],
+      birthDistrict: ["", Validators.required],
+      birthDate: ["", Validators.required],
+      age: ["", Validators.required]
     });
     this.secondFormGroup = this._formBuilder.group({
       secondCtrl: ["", Validators.required]
