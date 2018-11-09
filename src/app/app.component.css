@@ -1,0 +1,25 @@
+.fill-remaining-space {
+  /* This fills the remaining space, by using flexbox. 
+       Every toolbar row uses a flexbox row layout. */
+  flex: 1 1 auto;
+}
+.sidebar-container {
+  position: absolute;
+  top: 70px;
+  bottom: 0;
+  left: 10px;
+  right: 0;
+}
+
+.salutation {
+  color: gray;
+  margin-right: 10px;
+  font-size: 0.8em;
+  font-weight: 300;
+}
+.mat-icon {
+  padding-right: 5px;
+}
+.green-divider-line {
+  background-color: #31b93b;
+}

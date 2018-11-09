@@ -1,0 +1,21 @@
+.main-container {
+  margin-top: 50px;
+}
+.login-header {
+  background: #ff6600;
+  color: #ffff;
+  padding: 12px;
+}
+.login-content {
+  padding: 24px 42px 42px;
+  width: 100%;
+}
+
+.red-snackbar {
+  color: white;
+  background-color: red;
+}
+.login-form {
+  min-width: 300px;
+  max-width: 500px;
+}

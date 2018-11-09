@@ -3,7 +3,13 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  authenticationEndPoint: "./mockup/successLogin.json",
+  dataEndPoint: "http://127.0.0.1:3010",
+  authenticationApiKey: "AsecretKeytoTheAuthenticationAPIendPoint",
+  applicationGroupIdentifier: "BACKOFFICE",
+  applicationName: "Birth Cert App",
+  companyLogo: "../assets/img/company_logo.png"
 };
 
 /*
