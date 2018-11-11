@@ -16,17 +16,44 @@ export class NewApplicationComponent implements OnInit {
 
   ngOnInit() {
     this.firstFormGroup = this._formBuilder.group({
-      name: ["", Validators.required],
+      firstName: ["", Validators.required],
+      lastName: ["", Validators.required],
       birthPlace: ["", Validators.required],
       birthDistrict: ["", Validators.required],
       birthDate: ["", Validators.required],
-      age: ["", Validators.required]
-    });
-    this.secondFormGroup = this._formBuilder.group({
-      secondCtrl: ["", Validators.required]
-    });
-    this.thirdFormGroup = this._formBuilder.group({
-      thirdCtrl: ["", Validators.required]
+      registrationDate: ["", Validators.required],
+      age: ["", Validators.required],
+      momFirstName: ["", Validators.required],
+      momLastName: ["", Validators.required],
+      momMaidenName: ["", Validators.required],
+      momBirthCountry: ["", Validators.required],
+      momBirthDate: ["", Validators.required],
+      momIdType: ["", Validators.required],
+      momIdNumber: ["", Validators.required],
+      dadFirstName: ["", Validators.required],
+      dadLastName: ["", Validators.required],
+      dadBirthCountry: ["", Validators.required],
+      dadBirthDate: ["", Validators.required],
+      dadIdType: ["", Validators.required],
+      dadIdNumber: ["", Validators.required],
+      appFirstName: ["", Validators.required],
+      appLastName: ["", Validators.required],
+      appAddressLn1: ["", Validators.required],
+      appAddressLn2: ["", Validators.required],
+      appCity: ["", Validators.required],
+      appDistrict: ["", Validators.required],
+      appCountry: ["", Validators.required],
+      appIdType: ["", Validators.required],
+      appIdNumber: ["", Validators.required],
+      appRelation: ["", Validators.required],
+      appPurpose: ["", Validators.required],
+      appDate: ["", Validators.required],
+      delFirstName: ["", Validators.required],
+      delLastName: ["", Validators.required],
+      delIdType: ["", Validators.required],
+      delIdNumber: ["", Validators.required],
+      delTelephone: ["", Validators.required],
+      delDateReceived: ["", Validators.required]
     });
   }
 }
