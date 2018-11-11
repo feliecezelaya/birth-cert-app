@@ -22,6 +22,7 @@ import { ConfirmationDialogComponent } from "./confirmation-dialog/confirmation-
 import { SuccessDialogComponent } from "./success-dialog/success-dialog.component";
 import { ErrorDialogComponent } from "./error-dialog/error-dialog.component";
 import { NewApplicationComponent } from './application/new-application/new-application.component';
+import { UploadComponent } from './upload/upload.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { NewApplicationComponent } from './application/new-application/new-appli
     ErrorDialogComponent,
     FilterItPipe,
     FilterRolePipe,
-    NewApplicationComponent
+    NewApplicationComponent,
+    UploadComponent
   ],
   imports: [
     BrowserModule,

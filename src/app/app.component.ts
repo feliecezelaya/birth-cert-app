@@ -94,12 +94,12 @@ export class AppComponent implements OnInit, OnDestroy {
 
     // This buttons will be rendered on top of the page
     this.leftMenu = [
-      // {
-      //   group: "Dashboard",
-      //   title: "Dashboard ",
-      //   urlPath: "/dashboard",
-      //   roles: "*"
-      // },
+       {
+         group: "Application",
+         title: "Upload ",
+         urlPath: "/upload",
+         roles: "*"
+       },
       {
         group: "Application",
         title: "New Application ",
