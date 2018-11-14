@@ -12,3 +12,18 @@ line-height: 24px;
 border-radius: 8px;
 min-width: 150px
 }
+
+.example-radio-group {
+  display: inline-flex;
+  flex-direction: column;
+}
+
+.example-radio-button {
+  margin: 5px;
+}
+
+.payment-btn {
+  margin: 15px 0;
+  flex-direction: column;
+}
+
