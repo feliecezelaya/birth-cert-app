@@ -1,9 +1,23 @@
 <div class="mat-elevation-z12">
   <mat-toolbar color="primary" mat-elevation-z12>
 
-    <button mat-icon-button (click)="toggleTheDrawer()" *ngIf="displayMenu">
-      <mat-icon>menu</mat-icon>
+    <button mat-icon-button [matMenuTriggerFor]="menu">
+      <mat-icon>more_vert</mat-icon>
     </button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item (click)="callRoute('main')">
+        <mat-icon>home</mat-icon>
+        <span>Home</span>
+      </button>
+      <button mat-menu-item (click)="callRoute('application/new')">
+        <mat-icon>description</mat-icon>
+        <span>New Application</span>
+      </button>
+      <button mat-menu-item (click)="callRoute('application/new')">
+        <mat-icon>history</mat-icon>
+        <span>Application History</span>
+      </button>
+    </mat-menu>
 
     <span>&nbsp;{{title}}</span>
     <span class="fill-remaining-space"></span>
@@ -22,11 +36,14 @@
   </mat-toolbar>
 </div>
 
-<mat-drawer-container class="sidebar-container" [hasBackdrop]="false">
+<mat-card>
+  <mat-card-content>
+    <router-outlet></router-outlet>
+  </mat-card-content>
+</mat-card>
+
+<!-- <mat-drawer-container class="sidebar-container" [hasBackdrop]="false">
   <mat-drawer #drawer mode="side">
-    <p align="center">
-      <mat-icon>home</mat-icon>
-    </p>
     <mat-expansion-panel *ngFor="let group of leftGroups">
       <mat-expansion-panel-header>
         <mat-panel-title>
@@ -57,16 +74,16 @@
         </button>
       </mat-list-item>
     </mat-nav-list>
-  </mat-drawer>
+  </mat-drawer> -->
 
-  <mat-drawer-content>
-    <mat-toolbar mat-elevation-z12>
+<!-- <mat-drawer-content> -->
+<!-- <mat-toolbar mat-elevation-z12>
       <span class="fill-remaining-space"></span>
       <p class="salutation" *ngIf="displayMenu">
         Good day, {{userInfo.displayName}}
       </p>
-    </mat-toolbar>
+    </mat-toolbar> -->
 
-    <router-outlet></router-outlet>
-  </mat-drawer-content>
-</mat-drawer-container>
+<!-- <router-outlet></router-outlet>
+</mat-drawer-content> -->
+<!-- </mat-drawer-container> -->

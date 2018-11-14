@@ -4,6 +4,7 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from "@angular/common/http";
 import { HttpInterceptorService } from "./providers/http-interceptor.service";
 import { ReactiveFormsModule, FormsModule } from "@angular/forms";
 
+import { UtilService } from "./providers/util.service";
 import { AppComponent } from "./app.component";
 import { LoginComponent } from "./login/login.component";
 import { NavBarComponent } from "./nav-bar/nav-bar.component";
@@ -21,7 +22,7 @@ import { FilterRolePipe } from "./pipes/filter-role.pipe";
 import { ConfirmationDialogComponent } from "./confirmation-dialog/confirmation-dialog.component";
 import { SuccessDialogComponent } from "./success-dialog/success-dialog.component";
 import { ErrorDialogComponent } from "./error-dialog/error-dialog.component";
-import { NewApplicationComponent } from './application/new-application/new-application.component';
+import { NewApplicationComponent } from "./application/new-application/new-application.component";
 
 @NgModule({
   declarations: [

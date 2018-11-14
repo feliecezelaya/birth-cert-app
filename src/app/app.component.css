@@ -23,3 +23,7 @@
 .green-divider-line {
   background-color: #31b93b;
 }
+
+.mat-toolbar-single-row {
+  height: 50px;
+}

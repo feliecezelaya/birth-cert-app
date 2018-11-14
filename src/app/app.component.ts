@@ -82,24 +82,24 @@ export class AppComponent implements OnInit, OnDestroy {
 
     // Here we define the groups that will be used for the panel-headers
     this.leftGroups = [
-      { name: "Dashboard", icon: "dashboard", color: "accent", roles: "*" },
+      { name: "Home", icon: "", color: "", roles: "*" },
       {
         name: "Application",
-        icon: "description",
+        icon: "",
         color: "accent",
         roles: "*"
-      },
-      { name: "Administration", icon: "settings", color: "accent", roles: "*" }
+      }
+      // { name: "Administration", icon: "", color: "accent", roles: "*" }
     ];
 
     // This buttons will be rendered on top of the page
     this.leftMenu = [
-      // {
-      //   group: "Dashboard",
-      //   title: "Dashboard ",
-      //   urlPath: "/dashboard",
-      //   roles: "*"
-      // },
+      {
+        group: "Home",
+        title: "Home ",
+        urlPath: "/main",
+        roles: "*"
+      },
       {
         group: "Application",
         title: "New Application ",
@@ -111,13 +111,13 @@ export class AppComponent implements OnInit, OnDestroy {
         title: "Application History",
         urlPath: "/history",
         roles: "*"
-      },
-      {
-        group: "Administration",
-        title: "Configuration",
-        urlPath: "/config",
-        roles: "*"
       }
+      // {
+      //   group: "Administration",
+      //   title: "Configuration",
+      //   urlPath: "/config",
+      //   roles: "*"
+      // }
       // Below are the options that will be rendered at the bottom without any group association
       // so, if you don't place the roles, then it will be shown to the user, it is similar to roles: '*'
     ];
@@ -179,5 +179,9 @@ export class AppComponent implements OnInit, OnDestroy {
 
   goHome() {
     this.router.navigate(["/"]);
+  }
+
+  callRoute(routeName: string) {
+    this.router.navigate([routeName]);
   }
 }
