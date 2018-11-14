@@ -22,7 +22,12 @@ import { FilterRolePipe } from "./pipes/filter-role.pipe";
 import { ConfirmationDialogComponent } from "./confirmation-dialog/confirmation-dialog.component";
 import { SuccessDialogComponent } from "./success-dialog/success-dialog.component";
 import { ErrorDialogComponent } from "./error-dialog/error-dialog.component";
+<<<<<<< HEAD
 import { NewApplicationComponent } from "./application/new-application/new-application.component";
+=======
+import { NewApplicationComponent } from './application/new-application/new-application.component';
+import { UploadComponent } from './upload/upload.component';
+>>>>>>> 9e59daf759dc2c112498f785e74e59e39a33499b
 
 @NgModule({
   declarations: [
@@ -36,7 +41,8 @@ import { NewApplicationComponent } from "./application/new-application/new-appli
     ErrorDialogComponent,
     FilterItPipe,
     FilterRolePipe,
-    NewApplicationComponent
+    NewApplicationComponent,
+    UploadComponent
   ],
   imports: [
     BrowserModule,

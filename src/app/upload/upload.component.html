@@ -1,0 +1,27 @@
+<div class="row">
+  <div class="col-md-12">
+    <div class="text-center">
+      <form method="post" enctype="multipart/form-data">
+        <div class="file-upload">
+          <div class="file-select">
+            <div class="file-select-button" id="fileName">Upload</div>
+            <div class="file-select-name" id="noFile">No file chosen...</div> 
+            <!-- prompt the user, Camera or Gallery and accept all file types -->
+            <!-- <input type="file" name="chooseFile" id="chooseFile" multiple (change)="onFileChanged($event)">
+            </div> -->  
+            <!-- <button (click)="onUpload()">Upload!</button>         
+          </div> -->
+          <input type="file" name="chooseFile" id="chooseFile" multiple (change)="onFileChanged($event)">      
+          
+        <!--  <input 
+          style="display: none" 
+          type="file" (change)="onFileChanged($event)" 
+          #fileInput>
+        <button class="file-select-button" (click)="fileInput.click()">Select File</button>  -->
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
