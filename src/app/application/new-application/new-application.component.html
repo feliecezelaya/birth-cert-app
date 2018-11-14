@@ -46,7 +46,7 @@
               <input matInput placeholder="Age at last Birth Date" formControlName="age" type="number">
             </mat-form-field>
             <div>
-              <button mat-raised-button matStepperNext class="blu">Next</button>
+              <button mat-raised-button matStepperNext >Next</button>
             </div>
           </div>
         </mat-card-content>
@@ -74,7 +74,7 @@
               <input matInput placeholder="Maiden Name" formControlName="momMaidenName">
             </mat-form-field>
             <mat-form-field>
-              <mat-select matNativeControl placeholder="Country of Birth" formControlName="momBirthCountry" [(value)]="selected">
+              <mat-select matNativeControl placeholder="Country of Birth" formControlName="momBirthCountry" >
                 <mat-option>None</mat-option>
                 <mat-option value="AFG">Afghanistan</mat-option>
                 <mat-option value="ALA">Aland Islands</mat-option>
@@ -333,7 +333,7 @@
               <mat-datepicker #picker3></mat-datepicker>
             </mat-form-field>
             <mat-form-field>
-              <mat-select matNativeControl placeholder="ID Type" formControlName="momIdType" [(value)]="selected">
+              <mat-select matNativeControl placeholder="ID Type" formControlName="momIdType" >
                 <mat-option>None</mat-option>
                 <mat-option value="SocialSecurity">Social Security</mat-option>
                 <mat-option value="Passport">Passport</mat-option>
@@ -369,7 +369,7 @@
               <input matInput placeholder="Last Name" formControlName="dadLastName">
             </mat-form-field>
             <mat-form-field>
-              <mat-select matNativeControl placeholder="Country of Birth" formControlName="dadBirthCountry" [(value)]="selected">
+              <mat-select matNativeControl placeholder="Country of Birth" formControlName="dadBirthCountry" >
                 <mat-option>None</mat-option>
                 <mat-option value="AFG">Afghanistan</mat-option>
                 <mat-option value="ALA">Aland Islands</mat-option>
@@ -628,7 +628,7 @@
               <mat-datepicker #picker4></mat-datepicker>
             </mat-form-field>
             <mat-form-field>
-              <mat-select matNativeControl placeholder="ID Type" formControlName="dadIdType" [(value)]="selected">
+              <mat-select matNativeControl placeholder="ID Type" formControlName="dadIdType" >
                 <mat-option>None</mat-option>
                 <mat-option value="SocialSecurity">Social Security</mat-option>
                 <mat-option value="Passport">Passport</mat-option>
@@ -684,7 +684,7 @@
               </mat-select>
             </mat-form-field>
             <mat-form-field>
-              <mat-select matNativeControl placeholder="Country" formControlName="appCountry" [(value)]="selected">
+              <mat-select matNativeControl placeholder="Country" formControlName="appCountry" >
                 <mat-option>None</mat-option>
                 <mat-option value="AFG">Afghanistan</mat-option>
                 <mat-option value="ALA">Aland Islands</mat-option>
@@ -938,7 +938,7 @@
               </mat-select>
             </mat-form-field>
             <mat-form-field>
-              <mat-select matNativeControl placeholder="ID Type" formControlName="appIdType" [(value)]="selected">
+              <mat-select matNativeControl placeholder="ID Type" formControlName="appIdType" >
                 <mat-option>None</mat-option>
                 <mat-option value="SocialSecurity">Social Security</mat-option>
                 <mat-option value="Passport">Passport</mat-option>
@@ -959,6 +959,10 @@
               <mat-datepicker #picker5></mat-datepicker>
             </mat-form-field>
             <div>
+<<<<<<< HEAD
+=======
+              <button mat-raised-button matStepperPrevious color="accent">Back</button>
+>>>>>>> master
               <button mat-raised-button matStepperNext color="accent" class="float-right">Next</button>
             </div>
           </div>
@@ -985,7 +989,7 @@
               <input matInput placeholder="Last Name" formControlName="delLastName" type="text">
             </mat-form-field>
             <mat-form-field>
-              <mat-select matNativeControl placeholder="ID Type" formControlName="delIdType" [(value)]="selected">
+              <mat-select matNativeControl placeholder="ID Type" formControlName="delIdType" >
                 <mat-option>None</mat-option>
                 <mat-option value="SocialSecurity">Social Security</mat-option>
                 <mat-option value="Passport">Passport</mat-option>
