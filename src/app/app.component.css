@@ -10,7 +10,9 @@
   left: 10px;
   right: 0;
 }
-
+.redicon {
+  color: #a72525;
+}
 .salutation {
   color: gray;
   margin-right: 10px;
@@ -35,4 +37,5 @@
 .left-nav-bar {
   padding-right: 10px;
   font-size: 14px;
+  color: #a72525;
 }
