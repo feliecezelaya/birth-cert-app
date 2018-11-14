@@ -27,3 +27,8 @@
 .mat-toolbar-single-row {
   height: 50px;
 }
+
+.logo {
+  font-family: cambria;
+  color: #a72525;
+}
