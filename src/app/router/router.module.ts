@@ -19,13 +19,11 @@ const myRoutes: Routes = [
   },
   {
     path: "application/new",
-    component: NewApplicationComponent,
-    canActivate: [RouteGuardService]
+    component: NewApplicationComponent
   },
   {
     path: "upload",
-    component: UploadComponent,
-    canActivate: [RouteGuardService]
+    component: UploadComponent
   }
 ];
 
