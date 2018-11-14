@@ -8,7 +8,7 @@ import { LoginComponent } from "../login/login.component";
 import { MainComponent } from "../main/main.component";
 import { DashboardComponent } from "../dashboard/dashboard.component";
 import { NewApplicationComponent } from "../application/new-application/new-application.component";
-import{UploadComponent} from "../upload/upload.component";
+import { UploadComponent } from "../upload/upload.component";
 
 const myRoutes: Routes = [
   { path: "main", component: MainComponent },
@@ -19,9 +19,6 @@ const myRoutes: Routes = [
   },
   {
     path: "application/new",
-<<<<<<< HEAD
-    component: NewApplicationComponent
-=======
     component: NewApplicationComponent,
     canActivate: [RouteGuardService]
   },
@@ -29,7 +26,6 @@ const myRoutes: Routes = [
     path: "upload",
     component: UploadComponent,
     canActivate: [RouteGuardService]
->>>>>>> 9e59daf759dc2c112498f785e74e59e39a33499b
   }
 ];
 
