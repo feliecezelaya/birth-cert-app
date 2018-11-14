@@ -1,0 +1,19 @@
+h2 {
+  font: 500 20px/32px Roboto, "Helvetica Neue", sans-serif;
+}
+
+ul {
+  padding-inline-start: 0px;
+}
+
+li {
+  list-style: none;
+}
+
+.float-right {
+  float: right;
+}
+
+.app-hist-card {
+  padding-bottom: 10px;
+}

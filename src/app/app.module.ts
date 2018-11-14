@@ -24,6 +24,7 @@ import { SuccessDialogComponent } from "./success-dialog/success-dialog.componen
 import { ErrorDialogComponent } from "./error-dialog/error-dialog.component";
 import { NewApplicationComponent } from "./application/new-application/new-application.component";
 import { UploadComponent } from "./upload/upload.component";
+import { HistApplicationComponent } from './application/hist-application/hist-application.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { UploadComponent } from "./upload/upload.component";
     FilterItPipe,
     FilterRolePipe,
     NewApplicationComponent,
-    UploadComponent
+    UploadComponent,
+    HistApplicationComponent
   ],
   imports: [
     BrowserModule,

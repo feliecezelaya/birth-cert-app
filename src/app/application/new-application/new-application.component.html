@@ -13,13 +13,13 @@
           <div fxLayout="column" fxLayoutAlign="space-around">
             <ng-template matStepLabel>Personal Information</ng-template>
             <mat-form-field>
-              <input matInput placeholder="First Name" formControlName="firstName" type="text" required>
+              <input matInput placeholder="First Name" formControlName="firstName" type="text">
             </mat-form-field>
             <mat-form-field>
-              <input matInput placeholder="Last Name" formControlName="lastName" type="text" required>
+              <input matInput placeholder="Last Name" formControlName="lastName" type="text">
             </mat-form-field>
             <mat-form-field>
-              <input matInput placeholder="Born at" formControlName="birthPlace" type="text" required>
+              <input matInput placeholder="Born at" formControlName="birthPlace" type="text">
             </mat-form-field>
             <mat-form-field>
               <mat-select matNativeControl placeholder="In the District of" formControlName="birthDistrict" [(value)]="selected">
@@ -33,17 +33,17 @@
               </mat-select>
             </mat-form-field>
             <mat-form-field>
-              <input matInput [matDatepicker]="picker1" placeholder="Date of Birth" formControlName="birthDate" required>
+              <input matInput [matDatepicker]="picker1" placeholder="Date of Birth" formControlName="birthDate">
               <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
               <mat-datepicker #picker1></mat-datepicker>
             </mat-form-field>
             <mat-form-field>
-              <input matInput [matDatepicker]="picker2" placeholder="Date of Registration" formControlName="registrationDate" required>
+              <input matInput [matDatepicker]="picker2" placeholder="Date of Registration" formControlName="registrationDate">
               <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
               <mat-datepicker #picker2></mat-datepicker>
             </mat-form-field>
             <mat-form-field>
-              <input matInput placeholder="Age at last Birth Date" formControlName="age" type="number" required>
+              <input matInput placeholder="Age at last Birth Date" formControlName="age" type="number">
             </mat-form-field>
             <div>
               <button mat-raised-button matStepperNext color="accent">Next</button>
@@ -65,16 +65,16 @@
           <div fxLayout="column" fxLayoutAlign="space-around">
             <ng-template matStepLabel>Mother's Information</ng-template>
             <mat-form-field>
-              <input matInput placeholder="First Name" formControlName="momFirstName" required>
+              <input matInput placeholder="First Name" formControlName="momFirstName">
             </mat-form-field>
             <mat-form-field>
-              <input matInput placeholder="Last Name" formControlName="momLastName" required>
+              <input matInput placeholder="Last Name" formControlName="momLastName">
             </mat-form-field>
             <mat-form-field>
-              <input matInput placeholder="Maiden Name" formControlName="momMaidenName" required>
+              <input matInput placeholder="Maiden Name" formControlName="momMaidenName">
             </mat-form-field>
             <mat-form-field>
-              <mat-select matNativeControl placeholder="Country of Birth" formControlName="momBirthCountry" [(value)]="selected" required>
+              <mat-select matNativeControl placeholder="Country of Birth" formControlName="momBirthCountry" [(value)]="selected">
                 <mat-option>None</mat-option>
                 <mat-option value="AFG">Afghanistan</mat-option>
                 <mat-option value="ALA">Aland Islands</mat-option>
@@ -328,19 +328,19 @@
               </mat-select>
             </mat-form-field>
             <mat-form-field>
-              <input matInput [matDatepicker]="picker3" placeholder="Date of Birth" formControlName="momBirthDate" required>
+              <input matInput [matDatepicker]="picker3" placeholder="Date of Birth" formControlName="momBirthDate">
               <mat-datepicker-toggle matSuffix [for]="picker3"></mat-datepicker-toggle>
               <mat-datepicker #picker3></mat-datepicker>
             </mat-form-field>
             <mat-form-field>
-              <mat-select matNativeControl placeholder="ID Type" formControlName="momIdType" [(value)]="selected" required>
+              <mat-select matNativeControl placeholder="ID Type" formControlName="momIdType" [(value)]="selected">
                 <mat-option>None</mat-option>
                 <mat-option value="SocialSecurity">Social Security</mat-option>
                 <mat-option value="Passport">Passport</mat-option>
               </mat-select>
             </mat-form-field>
             <mat-form-field>
-              <input matInput placeholder="ID Number" formControlName="momIdNumber" required>
+              <input matInput placeholder="ID Number" formControlName="momIdNumber">
             </mat-form-field>
             <div>
               <button mat-raised-button matStepperPrevious color="accent">Back</button>
@@ -363,13 +363,13 @@
           <div fxLayout="column" fxLayoutAlign="space-around">
             <ng-template matStepLabel>Father's Information</ng-template>
             <mat-form-field>
-              <input matInput placeholder="First Name" formControlName="dadFirstName" required>
+              <input matInput placeholder="First Name" formControlName="dadFirstName">
             </mat-form-field>
             <mat-form-field>
-              <input matInput placeholder="Last Name" formControlName="dadLastName" required>
+              <input matInput placeholder="Last Name" formControlName="dadLastName">
             </mat-form-field>
             <mat-form-field>
-              <mat-select matNativeControl placeholder="Country of Birth" formControlName="dadBirthCountry" [(value)]="selected" required>
+              <mat-select matNativeControl placeholder="Country of Birth" formControlName="dadBirthCountry" [(value)]="selected">
                 <mat-option>None</mat-option>
                 <mat-option value="AFG">Afghanistan</mat-option>
                 <mat-option value="ALA">Aland Islands</mat-option>
@@ -623,19 +623,19 @@
               </mat-select>
             </mat-form-field>
             <mat-form-field>
-              <input matInput [matDatepicker]="picker4" placeholder="Date of Birth" formControlName="dadBirthDate" required>
+              <input matInput [matDatepicker]="picker4" placeholder="Date of Birth" formControlName="dadBirthDate">
               <mat-datepicker-toggle matSuffix [for]="picker4"></mat-datepicker-toggle>
               <mat-datepicker #picker4></mat-datepicker>
             </mat-form-field>
             <mat-form-field>
-              <mat-select matNativeControl placeholder="ID Type" formControlName="dadIdType" [(value)]="selected" required>
+              <mat-select matNativeControl placeholder="ID Type" formControlName="dadIdType" [(value)]="selected">
                 <mat-option>None</mat-option>
                 <mat-option value="SocialSecurity">Social Security</mat-option>
                 <mat-option value="Passport">Passport</mat-option>
               </mat-select>
             </mat-form-field>
             <mat-form-field>
-              <input matInput placeholder="ID Number" formControlName="dadIdNumber" required>
+              <input matInput placeholder="ID Number" formControlName="dadIdNumber">
             </mat-form-field>
             <div>
               <button mat-raised-button matStepperPrevious color="accent">Back</button>
@@ -658,19 +658,19 @@
           <div fxLayout="column" fxLayoutAlign="space-around">
             <ng-template matStepLabel>Applicant's Information</ng-template>
             <mat-form-field>
-              <input matInput placeholder="First Name" formControlName="appFirstName" type="text" required>
+              <input matInput placeholder="First Name" formControlName="appFirstName" type="text">
             </mat-form-field>
             <mat-form-field>
-              <input matInput placeholder="Last Name" formControlName="appLastName" type="text" required>
+              <input matInput placeholder="Last Name" formControlName="appLastName" type="text">
             </mat-form-field>
             <mat-form-field>
-              <input matInput placeholder="Address Line 1" formControlName="appAddressLn1" type="text" required>
+              <input matInput placeholder="Address Line 1" formControlName="appAddressLn1" type="text">
             </mat-form-field>
             <mat-form-field>
-              <input matInput placeholder="Address Line 2" formControlName="appAddressLn2" type="text" required>
+              <input matInput placeholder="Address Line 2" formControlName="appAddressLn2" type="text">
             </mat-form-field>
             <mat-form-field>
-              <input matInput placeholder="City" formControlName="appCity" type="text" required>
+              <input matInput placeholder="City" formControlName="appCity" type="text">
             </mat-form-field>
             <mat-form-field>
               <mat-select matNativeControl placeholder="District" formControlName="appDistrict" [(value)]="selected">
@@ -684,7 +684,7 @@
               </mat-select>
             </mat-form-field>
             <mat-form-field>
-              <mat-select matNativeControl placeholder="Country" formControlName="appCountry" [(value)]="selected" required>
+              <mat-select matNativeControl placeholder="Country" formControlName="appCountry" [(value)]="selected">
                 <mat-option>None</mat-option>
                 <mat-option value="AFG">Afghanistan</mat-option>
                 <mat-option value="ALA">Aland Islands</mat-option>
@@ -938,23 +938,23 @@
               </mat-select>
             </mat-form-field>
             <mat-form-field>
-              <mat-select matNativeControl placeholder="ID Type" formControlName="appIdType" [(value)]="selected" required>
+              <mat-select matNativeControl placeholder="ID Type" formControlName="appIdType" [(value)]="selected">
                 <mat-option>None</mat-option>
                 <mat-option value="SocialSecurity">Social Security</mat-option>
                 <mat-option value="Passport">Passport</mat-option>
               </mat-select>
             </mat-form-field>
             <mat-form-field>
-              <input matInput placeholder="ID Number" formControlName="appIdNumber" required>
+              <input matInput placeholder="ID Number" formControlName="appIdNumber">
             </mat-form-field>
             <mat-form-field>
-              <input matInput placeholder="Relation" formControlName="appRelation" type="text" required>
+              <input matInput placeholder="Relation" formControlName="appRelation" type="text">
             </mat-form-field>
             <mat-form-field>
-              <input matInput placeholder="Purpose" formControlName="appPurpose" type="text" required>
+              <input matInput placeholder="Purpose" formControlName="appPurpose" type="text">
             </mat-form-field>
             <mat-form-field>
-              <input matInput [matDatepicker]="picker5" placeholder="Date" formControlName="appDate" required>
+              <input matInput [matDatepicker]="picker5" placeholder="Date" formControlName="appDate">
               <mat-datepicker-toggle matSuffix [for]="picker5"></mat-datepicker-toggle>
               <mat-datepicker #picker5></mat-datepicker>
             </mat-form-field>
@@ -979,27 +979,27 @@
           <div fxLayout="column" fxLayoutAlign="space-around">
             <ng-template matStepLabel>Delivery Information</ng-template>
             <mat-form-field>
-              <input matInput placeholder="First Name" formControlName="delFirstName" type="text" required>
+              <input matInput placeholder="First Name" formControlName="delFirstName" type="text">
             </mat-form-field>
             <mat-form-field>
-              <input matInput placeholder="Last Name" formControlName="delLastName" type="text" required>
+              <input matInput placeholder="Last Name" formControlName="delLastName" type="text">
             </mat-form-field>
             <mat-form-field>
-              <mat-select matNativeControl placeholder="ID Type" formControlName="delIdType" [(value)]="selected" required>
+              <mat-select matNativeControl placeholder="ID Type" formControlName="delIdType" [(value)]="selected">
                 <mat-option>None</mat-option>
                 <mat-option value="SocialSecurity">Social Security</mat-option>
                 <mat-option value="Passport">Passport</mat-option>
               </mat-select>
             </mat-form-field>
             <mat-form-field>
-              <input matInput placeholder="ID Number" formControlName="delIdNumber" required>
+              <input matInput placeholder="ID Number" formControlName="delIdNumber">
             </mat-form-field>
             <mat-form-field>
               <span matPrefix>+1 &nbsp;</span>
-              <input type="tel" matInput placeholder="Telephone" formControlName="delTelephone" required>
+              <input type="tel" matInput placeholder="Telephone" formControlName="delTelephone">
             </mat-form-field>
             <mat-form-field>
-              <input matInput [matDatepicker]="picker6" placeholder="Date Received" formControlName="delDateReceived" required>
+              <input matInput [matDatepicker]="picker6" placeholder="Date Received" formControlName="delDateReceived">
               <mat-datepicker-toggle matSuffix [for]="picker6"></mat-datepicker-toggle>
               <mat-datepicker #picker6></mat-datepicker>
             </mat-form-field>
