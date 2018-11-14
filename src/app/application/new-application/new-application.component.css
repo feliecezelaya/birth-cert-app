@@ -5,3 +5,18 @@ h2 {
 .float-right {
   float: right;
 }
+
+.example-radio-group {
+  display: inline-flex;
+  flex-direction: column;
+}
+
+.example-radio-button {
+  margin: 5px;
+}
+
+.payment-btn {
+  margin: 15px 0;
+  flex-direction: column;
+}
+
