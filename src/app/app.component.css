@@ -28,6 +28,10 @@
   height: 50px;
 }
 
+.logo {
+  font-family: cambria;
+  color: #a72525;
+}
 .left-nav-bar {
   padding-right: 10px;
   font-size: 14px;

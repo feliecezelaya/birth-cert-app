@@ -7,7 +7,7 @@ $md-primary: (
   500: #7304c1,
   600: #6b03bb,
   700: #6003b3,
-  800: #5602ab,
+  800: #ede3c0,
   900: #43019e,
   A100: #dcc9ff,
   A200: #ba96ff,
@@ -30,6 +30,10 @@ $md-primary: (
     A700: #ffffff
   )
 );
+.mat-step-header .mat-step-icon-selected, .mat-step-header .mat-step-icon-state-done, .mat-step-header .mat-step-icon-state-edit {
+    background-color: #4fbfe1 !important;
+    color: white;
+  }
 
 $md-secondary: (
   50: #e6f7e7,
