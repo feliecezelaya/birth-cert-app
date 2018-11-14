@@ -1,0 +1,28 @@
+<h2>Birth Certificate Application History</h2>
+
+<ul>
+  <li *ngFor="let app of appHist; let i = index">
+    <div class="app-hist-card">
+      <mat-card>
+        <!-- <mat-card-header> -->
+        <mat-card-title> Reference No. {{ app.reference }} </mat-card-title>
+        <!-- </mat-card-header> -->
+        <mat-card-content>
+          <div>
+            <div>
+              Applicant Name: {{ app.lastName }}, {{ app.firstName }} |
+              Application Date: {{ app.appDate | date }}
+              <div class="float-right">
+                <mat-icon
+                  [ngStyle]="{ color: getStatusColor(app.applicationStatus) }"
+                >
+                  {{ getStatusIcon(app.applicationStatus) }}
+                </mat-icon>
+              </div>
+            </div>
+          </div>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </li>
+</ul>

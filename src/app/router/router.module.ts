@@ -9,6 +9,7 @@ import { MainComponent } from "../main/main.component";
 import { DashboardComponent } from "../dashboard/dashboard.component";
 import { NewApplicationComponent } from "../application/new-application/new-application.component";
 import { UploadComponent } from "../upload/upload.component";
+import { HistApplicationComponent } from "../application/hist-application/hist-application.component";
 
 const myRoutes: Routes = [
   { path: "main", component: MainComponent },
@@ -20,6 +21,10 @@ const myRoutes: Routes = [
   {
     path: "application/new",
     component: NewApplicationComponent
+  },
+  {
+    path: "application/history",
+    component: HistApplicationComponent
   },
   {
     path: "upload",

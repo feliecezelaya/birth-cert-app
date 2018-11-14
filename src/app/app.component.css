@@ -27,3 +27,8 @@
 .mat-toolbar-single-row {
   height: 50px;
 }
+
+.left-nav-bar {
+  padding-right: 10px;
+  font-size: 14px;
+}

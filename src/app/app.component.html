@@ -1,6 +1,5 @@
 <div class="mat-elevation-z12">
   <mat-toolbar color="primary" mat-elevation-z12>
-
     <button mat-icon-button [matMenuTriggerFor]="menu">
       <mat-icon>more_vert</mat-icon>
     </button>
@@ -13,36 +12,38 @@
         <mat-icon>description</mat-icon>
         <span>New Application</span>
       </button>
-      <button mat-menu-item (click)="callRoute('application/new')">
+      <button mat-menu-item (click)="callRoute('application/history')">
         <mat-icon>history</mat-icon>
         <span>Application History</span>
       </button>
     </mat-menu>
 
-    <span>&nbsp;{{title}}</span>
-    <span class="fill-remaining-space"></span>
+    <span>&nbsp;{{ title }}</span> <span class="fill-remaining-space"></span>
 
     <!-- Here we are rendering the buttons on top -->
     <p *ngFor="let btnItem of buttonMenus">
-      <button mat-button [routerLink]="[btnItem.btnUrlPath]" *ngIf="displayMenu">{{btnItem.btnTitle}}
-        <mat-icon *ngIf="btnItem.btnIcon">{{btnItem.btnIcon}}</mat-icon>
+      <button
+        mat-button
+        [routerLink]="[btnItem.btnUrlPath]"
+        *ngIf="displayMenu"
+      >
+        {{ btnItem.btnTitle }}
+        <mat-icon *ngIf="btnItem.btnIcon">{{ btnItem.btnIcon }}</mat-icon>
       </button>
     </p>
 
-    <button mat-icon-button *ngIf="displayMenu" (click)="logOut()">
-      <mat-icon>exit_to_app</mat-icon>
-    </button>
-
+    <div class="left-nav-bar">Sign In</div>
+    <div class="left-nav-bar">|</div>
+    <div class="left-nav-bar">Register</div>
   </mat-toolbar>
 </div>
 
 <mat-card>
-  <mat-card-content>
-    <router-outlet></router-outlet>
-  </mat-card-content>
+  <mat-card-content> <router-outlet></router-outlet> </mat-card-content>
 </mat-card>
 
-<!-- <mat-drawer-container class="sidebar-container" [hasBackdrop]="false">
+<!--
+  <mat-drawer-container class="sidebar-container" [hasBackdrop]="false">
   <mat-drawer #drawer mode="side">
     <mat-expansion-panel *ngFor="let group of leftGroups">
       <mat-expansion-panel-header>
@@ -74,16 +75,21 @@
         </button>
       </mat-list-item>
     </mat-nav-list>
-  </mat-drawer> -->
+  </mat-drawer>
+-->
 
 <!-- <mat-drawer-content> -->
-<!-- <mat-toolbar mat-elevation-z12>
-      <span class="fill-remaining-space"></span>
-      <p class="salutation" *ngIf="displayMenu">
-        Good day, {{userInfo.displayName}}
-      </p>
-    </mat-toolbar> -->
+<!--
+  <mat-toolbar mat-elevation-z12>
+    <span class="fill-remaining-space"></span>
+    <p class="salutation" *ngIf="displayMenu">
+      Good day, {{userInfo.displayName}}
+    </p>
+  </mat-toolbar>
+-->
 
-<!-- <router-outlet></router-outlet>
-</mat-drawer-content> -->
+<!--
+  <router-outlet></router-outlet>
+  </mat-drawer-content>
+-->
 <!-- </mat-drawer-container> -->
