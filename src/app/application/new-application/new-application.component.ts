@@ -1,7 +1,7 @@
-import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { UploadComponent } from '../../upload/upload.component';
-import { Router } from '@angular/router';
+import { Component, OnInit } from "@angular/core";
+import { FormBuilder, FormGroup, Validators } from "@angular/forms";
+import { UploadComponent } from "../../upload/upload.component";
+import { Router } from "@angular/router";
 
 @Component({
   selector: "app-new-application",
@@ -20,6 +20,8 @@ export class NewApplicationComponent implements OnInit {
     this.firstFormGroup = this._formBuilder.group({
       firstName: ["", Validators.required],
       lastName: ["", Validators.required],
+      email: ["", Validators.email],
+      phone: ["", Validators.required],
       birthPlace: ["", Validators.required],
       birthDistrict: ["", Validators.required],
       birthDate: ["", Validators.required],
@@ -55,12 +57,13 @@ export class NewApplicationComponent implements OnInit {
       delIdType: ["", Validators.required],
       delIdNumber: ["", Validators.required],
       delTelephone: ["", Validators.required],
-      delDateReceived: ["", Validators.required]
+      delDateReceived: ["", Validators.required],
+      pickupDate: [""],
+      pickupTime: [""]
     });
   }
 
   callRoute(routeName: string) {
     this.router.navigate([routeName]);
   }
-
 }

@@ -6,8 +6,8 @@ h2 {
   float: right;
 }
 .mat-raised-button {
-  background-color: #42bade;
-  color: white;
+  background-color: #520101;
+  color: #faf7ed;
 }
 
 .example-radio-group {
@@ -26,4 +26,12 @@ h2 {
 
 .pmt-card {
   padding-bottom: 10px;
+}
+
+.pmt-card-title {
+  font-size: 18px;
+}
+
+.half-width {
+  max-width: 40%;
 }

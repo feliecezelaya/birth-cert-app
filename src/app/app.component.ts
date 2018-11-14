@@ -7,19 +7,22 @@ import { UserLogged } from "../app/models/user.interface";
 import { environment } from "../environments/environment";
 import { MatDrawer, MatDrawerContent } from "@angular/material";
 
+import * as moment from "moment";
+
 @Component({
   selector: "app-root",
   templateUrl: "./app.component.html",
   styleUrls: ["./app.component.css"]
 })
 export class AppComponent implements OnInit, OnDestroy {
-  @ViewChild(MatDrawer)
-  theDrawer: MatDrawer;
+  // @ViewChild(MatDrawer)
+  // theDrawer: MatDrawer;
 
   title = environment.applicationName;
   companyLogo = environment.companyLogo;
   displayMenu = false;
   userInfo: UserLogged = <null>{};
+  copyrightYear: string = moment().format("YYYY");
 
   // Define the structure for menu on top of the application page
   buttonMenus: Array<{
@@ -51,34 +54,15 @@ export class AppComponent implements OnInit, OnDestroy {
     public router: Router
   ) {}
 
-  toggleTheDrawer() {
-    this.theDrawer.toggle();
-  }
   ngOnInit() {
     // We do this check in case the user hit the refresh button in the browser
     if (this.loginService.isLogged) {
       this.displayMenu = true;
       this.userInfo = this.loginService.user;
     } else {
-      this.displayMenu = false;
-      this.userInfo = <null>{};
+      // this.displayMenu = false;
+      // this.userInfo = <null>{};
     }
-
-    // This buttons will be rendered on top of the page
-    // this.buttonMenus = [
-    //   {
-    //     btnTitle: "Delivery Listing",
-    //     btnIcon: "",
-    //     btnUrlPath: "/deliveries",
-    //     roles: "*"
-    //   },
-    //   {
-    //     btnTitle: "Upload Payroll",
-    //     btnIcon: "",
-    //     btnUrlPath: "/upload",
-    //     roles: "*"
-    //   }
-    // ];
 
     // Here we define the groups that will be used for the panel-headers
     this.leftGroups = [
@@ -89,7 +73,6 @@ export class AppComponent implements OnInit, OnDestroy {
         color: "accent",
         roles: "*"
       }
-      // { name: "Administration", icon: "", color: "accent", roles: "*" }
     ];
 
     // This buttons will be rendered on top of the page
@@ -112,14 +95,6 @@ export class AppComponent implements OnInit, OnDestroy {
         urlPath: "/history",
         roles: "*"
       }
-      // {
-      //   group: "Administration",
-      //   title: "Configuration",
-      //   urlPath: "/config",
-      //   roles: "*"
-      // }
-      // Below are the options that will be rendered at the bottom without any group association
-      // so, if you don't place the roles, then it will be shown to the user, it is similar to roles: '*'
     ];
 
     this.loginService.onLogin$.subscribe(data => {
@@ -139,12 +114,11 @@ export class AppComponent implements OnInit, OnDestroy {
 
   logOut() {
     this.utilService
-      .confirmationDialog("Are you sure you want to logout?")
+      .confirmationDialog("Are you sure you want to sign out?")
       .then(resp => {
         if (resp) {
           this.loginService.logOut();
-          this.theDrawer.close();
-          this.router.navigate(["/"]);
+          this.router.navigate(["/main"]);
         }
       });
   }

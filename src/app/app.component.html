@@ -33,8 +33,11 @@
       </button>
     </p>
 
-    <div class="left-nav-bar">
+    <div class="left-nav-bar" *ngIf="!displayMenu">
       <button mat-button (click)="callRoute('login')">Sign In</button>
+    </div>
+    <div class="left-nav-bar" *ngIf="displayMenu">
+      <button mat-button (click)="logOut()">Sign Out</button>
     </div>
   </mat-toolbar>
 </div>
@@ -43,54 +46,10 @@
   <mat-card-content> <router-outlet></router-outlet> </mat-card-content>
 </mat-card>
 
-<!--
-  <mat-drawer-container class="sidebar-container" [hasBackdrop]="false">
-  <mat-drawer #drawer mode="side">
-    <mat-expansion-panel *ngFor="let group of leftGroups">
-      <mat-expansion-panel-header>
-        <mat-panel-title>
-          <mat-icon *ngIf="group.icon" matListIcon color="{{group.color}}">{{group.icon}}</mat-icon>
-          {{group.name}}
-        </mat-panel-title>
-      </mat-expansion-panel-header>
-      <mat-nav-list *ngFor="let item of leftMenu | filterIt:{group:group.name}">
-        <mat-list-item>
-          <a matLine [routerLink]="[item.urlPath]">{{item.title}}</a>
-          <mat-icon *ngIf="item.icon" matListIcon color="{{item.color}}">{{item.icon}}</mat-icon>
-        </mat-list-item>
-        <mat-divider></mat-divider>
-      </mat-nav-list>
-    </mat-expansion-panel>
-
-    <mat-nav-list *ngFor="let item of leftMenu | filterIt:{group:''} | filterRole:{roles: currentRole()} ">
-      <mat-list-item>
-        <a matLine [routerLink]="[item.urlPath]">{{item.title}}</a>
-      </mat-list-item>
-      <mat-divider></mat-divider>
-    </mat-nav-list>
-
-    <mat-nav-list *ngIf="displayMenu">
-      <mat-list-item>
-        <button mat-icon-button *ngIf="isLogged()" (click)="logOut()">
-          <mat-icon color="accent">exit_to_app</mat-icon> Log Out
-        </button>
-      </mat-list-item>
-    </mat-nav-list>
-  </mat-drawer>
--->
-
-<!-- <mat-drawer-content> -->
-<!--
-  <mat-toolbar mat-elevation-z12>
-    <span class="fill-remaining-space"></span>
-    <p class="salutation" *ngIf="displayMenu">
-      Good day, {{userInfo.displayName}}
-    </p>
-  </mat-toolbar>
--->
-
-<!--
-  <router-outlet></router-outlet>
-  </mat-drawer-content>
--->
-<!-- </mat-drawer-container> -->
+<mat-card>
+  <div class="align-center">
+    <mat-card-content class="no-padding">
+      © Copyright {{ copyrightYear }} | Belize Vital Statistics Unit
+    </mat-card-content>
+  </div>
+</mat-card>

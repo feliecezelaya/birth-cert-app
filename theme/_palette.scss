@@ -1,18 +1,50 @@
+// $md-primary: (
+//   50: #eee1f8,
+//   100: #d5b4ec,
+//   200: #b982e0,
+//   300: #9d4fd4,
+//   400: #882aca,
+//   500: #7304c1,
+//   600: #6b03bb,
+//   700: #6003b3,
+//   800: #ede3c0,
+//   900: #43019e,
+//   A100: #dcc9ff,
+//   A200: #ba96ff,
+//   A400: #9963ff,
+//   A700: #8949ff,
+//   contrast: (
+//     50: #000000,
+//     100: #000000,
+//     200: #000000,
+//     300: #ffffff,
+//     400: #ffffff,
+//     500: #ffffff,
+//     600: #ffffff,
+//     700: #ffffff,
+//     800: #ffffff,
+//     900: #ffffff,
+//     A100: #000000,
+//     A200: #000000,
+//     A400: #000000,
+//     A700: #ffffff
+//   )
+// );
 $md-primary: (
-  50: #eee1f8,
-  100: #d5b4ec,
-  200: #b982e0,
-  300: #9d4fd4,
-  400: #882aca,
-  500: #7304c1,
-  600: #6b03bb,
-  700: #6003b3,
-  800: #ede3c0,
-  900: #43019e,
-  A100: #dcc9ff,
-  A200: #ba96ff,
-  A400: #9963ff,
-  A700: #8949ff,
+  50: #fce5cd,
+  100: #d4b3b3,
+  200: #b78181,
+  300: #9a4e4e,
+  400: #852828,
+  500: #6f0202,
+  600: #670202,
+  700: #5c0101,
+  800: #520101,
+  900: #400101,
+  A100: #ff7575,
+  A200: #ff4242,
+  A400: #ff0f0f,
+  A700: #f50000,
   contrast: (
     50: #000000,
     100: #000000,
@@ -25,15 +57,17 @@ $md-primary: (
     800: #ffffff,
     900: #ffffff,
     A100: #000000,
-    A200: #000000,
-    A400: #000000,
+    A200: #ffffff,
+    A400: #ffffff,
     A700: #ffffff
   )
 );
-.mat-step-header .mat-step-icon-selected, .mat-step-header .mat-step-icon-state-done, .mat-step-header .mat-step-icon-state-edit {
-    background-color: #4fbfe1 !important;
-    color: white;
-  }
+.mat-step-header .mat-step-icon-selected,
+.mat-step-header .mat-step-icon-state-done,
+.mat-step-header .mat-step-icon-state-edit {
+  background-color: #520101 !important;
+  color: #faf7ed;
+}
 
 $md-secondary: (
   50: #e6f7e7,

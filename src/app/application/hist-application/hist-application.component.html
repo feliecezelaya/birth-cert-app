@@ -5,7 +5,11 @@
     <div class="app-hist-card">
       <mat-card>
         <!-- <mat-card-header> -->
-        <mat-card-title> Reference No. {{ app.reference }} </mat-card-title>
+        <mat-card-title
+          [ngStyle]="{ color: getStatusColor(app.applicationStatus) }"
+        >
+          Reference No. {{ app.reference }}
+        </mat-card-title>
         <!-- </mat-card-header> -->
         <mat-card-content>
           <div>

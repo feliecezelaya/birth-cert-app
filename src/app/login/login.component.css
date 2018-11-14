@@ -2,8 +2,8 @@
   margin-top: 50px;
 }
 .login-header {
-  background: #a72525;
-  color: #ffff;
+  background: #520101;
+  color: #faf7ed;
   padding: 12px;
 }
 .login-content {
@@ -12,7 +12,7 @@
 }
 
 .red-snackbar {
-  color: white;
+  color: #faf7ed;
   background-color: red;
 }
 .login-form {

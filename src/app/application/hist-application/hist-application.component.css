@@ -17,3 +17,7 @@ li {
 .app-hist-card {
   padding-bottom: 10px;
 }
+
+.mat-card-title {
+  font-size: 18px;
+}
