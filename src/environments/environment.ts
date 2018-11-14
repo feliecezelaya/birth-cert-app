@@ -8,7 +8,7 @@ export const environment = {
   dataEndPoint: "http://127.0.0.1:3010",
   authenticationApiKey: "AsecretKeytoTheAuthenticationAPIendPoint",
   applicationGroupIdentifier: "BACKOFFICE",
-  applicationName: "Birth Cert App",
+  applicationName: "Vital Statistics Unit",
   companyLogo: "../assets/img/company_logo.png"
 };
 

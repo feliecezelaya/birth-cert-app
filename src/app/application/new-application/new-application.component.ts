@@ -1,5 +1,6 @@
-import { Component, OnInit } from "@angular/core";
-import { FormBuilder, FormGroup, Validators } from "@angular/forms";
+import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { UploadComponent } from '../../upload/upload.component';
 
 @Component({
   selector: "app-new-application",

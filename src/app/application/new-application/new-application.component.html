@@ -22,7 +22,7 @@
               <input matInput placeholder="Born at" formControlName="birthPlace" type="text">
             </mat-form-field>
             <mat-form-field>
-              <mat-select matNativeControl placeholder="In the District of" formControlName="birthDistrict" [(value)]="selected">
+              <mat-select matNativeControl placeholder="In the District of" formControlName="birthDistrict" >
                 <mat-option>None</mat-option>
                 <mat-option value="Corozal">Corozal</mat-option>
                 <mat-option value="Belize">Belize</mat-option>
@@ -673,7 +673,7 @@
               <input matInput placeholder="City" formControlName="appCity" type="text">
             </mat-form-field>
             <mat-form-field>
-              <mat-select matNativeControl placeholder="District" formControlName="appDistrict" [(value)]="selected">
+              <mat-select matNativeControl placeholder="District" formControlName="appDistrict" >
                 <mat-option>None</mat-option>
                 <mat-option value="Corozal">Corozal</mat-option>
                 <mat-option value="Belize">Belize</mat-option>
@@ -1004,14 +1004,86 @@
               <mat-datepicker #picker6></mat-datepicker>
             </mat-form-field>
             <div>
-              <button mat-raised-button matStepperNext color="accent" (click)="stepper.reset()">Reset</button>
-              <button mat-raised-button matStepperNext color="accent" class="float-right">Submit Application</button>
+              <button mat-raised-button matStepperPrevious color="accent">Back</button>
+              <button mat-raised-button matStepperNext color="accent">Next</button>
             </div>
           </div>
         </mat-card-content>
       </mat-card>
     </form>
   </mat-step>
+
+  <mat-step [stepControl]="firstFormGroup"> 
+    <form [formGroup]="firstFormGroup">
+      <mat-card>
+        <!-- <mat-card-header> -->
+        <mat-card-title>Upload Files</mat-card-title>
+        <mat-card-subtitle>Upload Files/Provide Copies</mat-card-subtitle>
+        <!-- </mat-card-header> -->
+        <mat-card-content>
+          <div fxLayout="column" fxLayoutAlign="space-around">
+            <ng-template matStepLabel>Uploads</ng-template>  
+            
+            <div>Social sec</div>
+            <app-upload></app-upload> 
+            
+            <div>Passport</div>
+            <app-upload></app-upload> 
+            
+            <div>Proof of address</div>
+            <app-upload></app-upload>
+
+            <div>
+                <button mat-raised-button matStepperPrevious color="accent">Back</button>
+                <button mat-raised-button matStepperNext color="accent">Next</button>
+            </div>
+          </div>
+        </mat-card-content>
+      </mat-card>
+    </form>
+  </mat-step>
+
+
+  <mat-step [stepControl]="firstFormGroup"> 
+      <form [formGroup]="firstFormGroup">
+        <mat-card>
+          <!-- <mat-card-header> -->
+          <mat-card-title>Payment Methods</mat-card-title>
+          <mat-card-subtitle>Payments</mat-card-subtitle>
+          <!-- </mat-card-header> -->
+          <mat-card-content>
+            <div fxLayout="column" fxLayoutAlign="space-around">
+              <ng-template matStepLabel>Payment</ng-template>  
+              
+              <div>fees</div>   
+              <mat-radio-group class="example-radio-group">
+                <mat-radio-button class="example-radio-button" value="1">$4.00</mat-radio-button>
+                <mat-radio-button class="example-radio-button" value="2">$15.00</mat-radio-button>                
+                <mat-radio-button class="example-radio-button" value="2">$30.00</mat-radio-button>
+              </mat-radio-group>            
+
+              <div>Payment Method</div>              
+              <mat-radio-group class="example-radio-group">
+                <mat-radio-button class="example-radio-button" value="1">Credit Card</mat-radio-button>
+                <mat-radio-button class="example-radio-button" value="2">Paypal</mat-radio-button>
+                <mat-radio-button class="example-radio-button" value="2">Deposit</mat-radio-button>
+              </mat-radio-group>
+
+              <div class="payment-btn">
+                  <button mat-raised-button class="payment-btn" color="accent" >Pay now</button>
+                  <button mat-raised-button class = "payment-btn" color="accent" >Pay Later</button>
+              </div>
+              
+              <div>
+                <button mat-raised-button matStepperNext color="accent" (click)="stepper.reset()">Reset</button>
+                <button mat-raised-button matStepperNext color="accent" class="float-right">Submit Application</button>
+              </div>
+
+            </div>
+          </mat-card-content>
+        </mat-card>
+      </form>
+    </mat-step>
 
   <!-- 
   <mat-step>
