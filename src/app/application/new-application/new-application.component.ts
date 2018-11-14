@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { UploadComponent } from '../../upload/upload.component';
+import { Router } from '@angular/router';
 
 @Component({
   selector: "app-new-application",
@@ -13,7 +14,7 @@ export class NewApplicationComponent implements OnInit {
   secondFormGroup: FormGroup;
   thirdFormGroup: FormGroup;
 
-  constructor(private _formBuilder: FormBuilder) {}
+  constructor(private _formBuilder: FormBuilder, private router: Router) {}
 
   ngOnInit() {
     this.firstFormGroup = this._formBuilder.group({
@@ -57,4 +58,9 @@ export class NewApplicationComponent implements OnInit {
       delDateReceived: ["", Validators.required]
     });
   }
+
+  callRoute(routeName: string) {
+    this.router.navigate([routeName]);
+  }
+
 }
