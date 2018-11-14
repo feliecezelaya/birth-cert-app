@@ -43,6 +43,7 @@
 .align-center {
   margin: auto;
   align-content: center;
+  display: table;
 }
 
 .no-padding {

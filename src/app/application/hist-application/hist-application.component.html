@@ -3,7 +3,7 @@
 <ul>
   <li *ngFor="let app of appHist; let i = index">
     <div class="app-hist-card">
-      <mat-card>
+      <mat-card (click)="callRoute('application/view', app.reference)">
         <!-- <mat-card-header> -->
         <mat-card-title
           [ngStyle]="{ color: getStatusColor(app.applicationStatus) }"
@@ -15,7 +15,16 @@
           <div>
             <div>
               Applicant Name: {{ app.lastName }}, {{ app.firstName }} |
-              Application Date: {{ app.appDate | date }}
+              Application Date: {{ app.appDate | date }} |
+              <!--
+                <button
+                  mat-button
+                  color="primary"
+                  (click)="callRoute('application/view', app.reference)"
+                >
+                  View Application
+                </button>
+              -->
               <div class="float-right">
                 <mat-icon
                   [ngStyle]="{ color: getStatusColor(app.applicationStatus) }"

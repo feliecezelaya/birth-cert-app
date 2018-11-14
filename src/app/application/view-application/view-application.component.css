@@ -1,0 +1,37 @@
+h2 {
+  font: 500 20px/32px Roboto, "Helvetica Neue", sans-serif;
+}
+
+.float-right {
+  float: right;
+}
+.mat-raised-button {
+  background-color: #520101;
+  color: #faf7ed;
+}
+
+.example-radio-group {
+  display: inline-flex;
+  flex-direction: column;
+}
+
+.example-radio-button {
+  margin: 5px;
+}
+
+.payment-btn {
+  margin: 15px 0;
+  flex-direction: column;
+}
+
+.pmt-card {
+  padding-bottom: 10px;
+}
+
+.pmt-card-title {
+  font-size: 18px;
+}
+
+.half-width {
+  max-width: 40%;
+}

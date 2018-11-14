@@ -1,6 +1,5 @@
 import { Component, OnInit } from "@angular/core";
 import { FormBuilder, FormGroup, Validators } from "@angular/forms";
-import { UploadComponent } from "../../upload/upload.component";
 import { Router } from "@angular/router";
 
 @Component({

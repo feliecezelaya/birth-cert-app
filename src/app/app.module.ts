@@ -25,6 +25,7 @@ import { ErrorDialogComponent } from "./error-dialog/error-dialog.component";
 import { NewApplicationComponent } from "./application/new-application/new-application.component";
 import { UploadComponent } from "./upload/upload.component";
 import { HistApplicationComponent } from "./application/hist-application/hist-application.component";
+import { ViewApplicationComponent } from './application/view-application/view-application.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { HistApplicationComponent } from "./application/hist-application/hist-ap
     FilterRolePipe,
     NewApplicationComponent,
     UploadComponent,
-    HistApplicationComponent
+    HistApplicationComponent,
+    ViewApplicationComponent
   ],
   entryComponents: [
     ConfirmationDialogComponent,

@@ -10,6 +10,7 @@ import { DashboardComponent } from "../dashboard/dashboard.component";
 import { NewApplicationComponent } from "../application/new-application/new-application.component";
 import { UploadComponent } from "../upload/upload.component";
 import { HistApplicationComponent } from "../application/hist-application/hist-application.component";
+import { ViewApplicationComponent } from "../application/view-application/view-application.component";
 
 const myRoutes: Routes = [
   { path: "login", component: LoginComponent },
@@ -26,6 +27,11 @@ const myRoutes: Routes = [
   {
     path: "application/history",
     component: HistApplicationComponent,
+    canActivate: [RouteGuardService]
+  },
+  {
+    path: "application/view/:ref",
+    component: ViewApplicationComponent,
     canActivate: [RouteGuardService]
   },
   {

@@ -1,5 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { ApplicationHistory } from "../../../assets/mockup/applicationHistory";
+import { Router } from "@angular/router";
 
 @Component({
   selector: "app-hist-application",
@@ -9,7 +10,7 @@ import { ApplicationHistory } from "../../../assets/mockup/applicationHistory";
 export class HistApplicationComponent implements OnInit {
   appHist = ApplicationHistory;
 
-  constructor() {}
+  constructor(private router: Router) {}
 
   ngOnInit() {}
 
@@ -37,5 +38,9 @@ export class HistApplicationComponent implements OnInit {
         break;
     }
     return statusColor;
+  }
+
+  callRoute(routeName: string, appRef: string) {
+    this.router.navigate([routeName + "/" + appRef]);
   }
 }
