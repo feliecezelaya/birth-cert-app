@@ -45,7 +45,7 @@ export class LoginComponent implements AfterViewInit {
       .authenticateUser(this.user)
       .then(resp => {
         // navigate to main component
-        this.route.navigate(["/main"]);
+        this.route.navigate(["application/history"]);
       })
       .catch(err => {
         console.log("Error", err);

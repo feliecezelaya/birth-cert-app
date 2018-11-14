@@ -12,6 +12,7 @@ import { UploadComponent } from "../upload/upload.component";
 import { HistApplicationComponent } from "../application/hist-application/hist-application.component";
 
 const myRoutes: Routes = [
+  { path: "login", component: LoginComponent },
   { path: "main", component: MainComponent },
   { path: "", redirectTo: "/main", pathMatch: "full" },
   {
@@ -24,7 +25,8 @@ const myRoutes: Routes = [
   },
   {
     path: "application/history",
-    component: HistApplicationComponent
+    component: HistApplicationComponent,
+    canActivate: [RouteGuardService]
   },
   {
     path: "upload",

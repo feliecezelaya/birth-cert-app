@@ -6,11 +6,8 @@ h2 {
   float: right;
 }
 .mat-raised-button {
-background-color: #42bade;
-color: white;
-line-height: 24px;
-border-radius: 8px;
-min-width: 150px
+  background-color: #42bade;
+  color: white;
 }
 
 .example-radio-group {
@@ -27,3 +24,6 @@ min-width: 150px
   flex-direction: column;
 }
 
+.pmt-card {
+  padding-bottom: 10px;
+}
