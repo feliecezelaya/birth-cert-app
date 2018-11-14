@@ -7,6 +7,7 @@ import { LoginComponent } from "../login/login.component";
 import { MainComponent } from "../main/main.component";
 import { DashboardComponent } from "../dashboard/dashboard.component";
 import { NewApplicationComponent } from "../application/new-application/new-application.component";
+import{UploadComponent} from "../upload/upload.component";
 
 const myRoutes: Routes = [
   { path: "auth", component: LoginComponent },
@@ -24,6 +25,11 @@ const myRoutes: Routes = [
   {
     path: "application/new",
     component: NewApplicationComponent,
+    canActivate: [RouteGuardService]
+  },
+  {
+    path: "upload",
+    component: UploadComponent,
     canActivate: [RouteGuardService]
   }
 ];
